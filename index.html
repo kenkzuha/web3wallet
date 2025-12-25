@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trust Wallet dApp</title>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+<div class="container">
+    <h1>🔐 Trust Wallet dApp</h1>
+    <p class="subtitle">Connect your wallet to view balance and send crypto</p>
+    <button id="connectBtn" class="btn-primary">Connect Wallet</button>
+    <div id="walletInfo" class="wallet-info">
+        <div class="info-row">
+            <div class="info-label">Wallet Address</div>
+            <div class="info-value" id="walletAddress">-</div>
+        </div>
+        <div class="info-row">
+            <div class="info-label">Balance</div>
+            <div class="info-value balance" id="balance">-</div>
+        </div>
+        <div class="info-row">
+            <div class="info-label">Network</div>
+            <div class="info-value" id="network">-</div>
+        </div>
+        <button id="sendBtn" class="btn-secondary">Send Transaction</button>
+        <button id="refreshBtn" class="btn-secondary">Refresh Balance</button>
+        <button id="disconnectBtn" class="btn-danger">Disconnect</button>
+        <div id="sendForm" class="send-form">
+            <h3>Send ETH</h3>
+            <input type="text" id="recipientAddress" placeholder="Recipient Address (0x...)">
+            <input type="text" id="amount" placeholder="Amount (ETH)">
+            <button id="confirmSendBtn" class="btn-primary">Confirm & Send</button>
+            <button id="cancelSendBtn" class="btn-secondary">Cancel</button>
+        </div>
+    </div>
+    <div id="status" class="status"></div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
